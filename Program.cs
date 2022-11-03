@@ -45,21 +45,24 @@
         {
             try
             {
+                do{
+                Console.WriteLine("Do not forget triangle's sides cannot be less than 0!");
                 Console.Write("Input your side 1 ");
                 obj2.side1 = double.Parse(Console.ReadLine());
                 Console.Write("Input your side 2 ");
                 obj2.side2 = double.Parse(Console.ReadLine());
                 Console.Write("Input your side 3 ");
                 obj2.side3 = double.Parse(Console.ReadLine());
+                } while (obj2.side1 <= 0 || obj2.side2 <= 0 || obj2.side3 <= 0);
                 do{
-                Console.WriteLine("Do not forget that angles in sum cannot be greater than 180!");
+                Console.WriteLine("Do not forget that angles in sum cannot be greater and less than 180!");
                 Console.Write("Input your angle 1 ");
                 obj2.angle1 = double.Parse(Console.ReadLine());
                 Console.Write("Input your angle 2 ");
                 obj2.angle2 = double.Parse(Console.ReadLine());
                 Console.Write("Input your angle 3 ");
                 obj2.angle3 = double.Parse(Console.ReadLine());
-                } while(obj2.angle1 + obj2.angle2 + obj2.angle3 > 180);
+                } while(obj2.angle1 + obj2.angle2 + obj2.angle3 != 180);
                 break;
             }
             catch
